@@ -1,0 +1,57 @@
+query,user_role,expected_answer
+"Tell me about the system architecture of FinSolve
+",c-level,"Based on the company's engineering documentation, here is an overview of FinSolve's system architecture:
+Core Design FinSolve uses a microservices-based, cloud-native system. This architecture is designed to be:
+Scalable
+Resilient
+Secure
+The modular design enables the team to develop features rapidly and integrate seamlessly with third-party financial systems, including:
+Payment gateways
+Credit bureaus
+Regulatory reporting systems
+High-Level Architecture Components
+Client Apps:
+Mobile Apps (iOS, Android)
+Web App (React)
+APIs:
+REST
+GraphQL"
+Give me quarter-wise marketing spend,general,"I can't help you with that. Please ask questions relevant to your role.
+"
+What is the company's leave policy?,engineering,"Here's the company's leave policy:
+Types of Leave & Entitlements
+Privilege/Annual Leave: 15–21 days per year (accrued monthly)
+Sick Leave: 12 days per year (non-cumulative)
+Casual Leave: 7 days per year (state-specific)
+Maternity Leave: 26 weeks for the first two children; 12 weeks for subsequent children
+Paternity Leave: 7–15 days (company policy)
+Bereavement Leave: 3–7 days for immediate family
+Compensatory Off: For work done on holidays/weekends (requires manager approval)
+Public Holidays: 10–14 days per year, based on the company calendar and state notifications
+Leave Without Pay: Allowed with approval after exhausting paid leave
+Application Process
+Apply via the HRMS/leave portal at least 3 days in advance (except for emergencies)
+Sick leave exceeding 2 days requires a medical certificate
+Emergency leave must be communicated to your manager/HR as soon as possible
+All requests require approval from both your reporting manager and HR
+You can check your leave balance on the HRMS portal"
+What is the overall ROI for FinSolve,c-level,The Return on Investment (ROI) for FinSolve Technologies is 15%.
+Give me quarter-wise marketing spend,c-level,"Quarter-wise Marketing Spend (2024)
+
+Quarter
+Marketing Spend
+Source
+Q1 2024
+$2 million
+marketing_report_q1_2024.pdf (Page 1)
+Q2 2024
+$2.5 million
+marketing_report_q2_2024.pdf (Page 1)
+Q3 2024
+$2 million
+marketing_report_q3_2024.pdf (Page 1)
+Q4 2024
+$2.5 million
+market_report_q4_2024.pdf (Page 1)
+Total 2024 Marketing Spend: $9 million"
+Who is the highest wicket-taker in Test Cricket?,c-level,I can't help you with that. Please ask questions relevant to your role.
