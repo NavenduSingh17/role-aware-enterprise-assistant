@@ -1,16 +1,22 @@
+<div align="center">
+
 # Role-Aware Enterprise AI Assistant
 
 An end-to-end **Agentic RAG-powered enterprise knowledge assistant** that enables employees to query internal company documents and structured databases using natural language. The application combines role-based access control, hybrid retrieval, contextual reranking and source citations to deliver evidence-backed responses while respecting departmental data-access boundaries.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=chainlink&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat&logo=langchain&logoColor=white)
-![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Database-5B4DCE?style=flat)
-![Cohere](https://img.shields.io/badge/Cohere-Rerank-39594D?style=flat)
-![Groq](https://img.shields.io/badge/Groq-LLM%20Inference-F55036?style=flat)
-![LangSmith](https://img.shields.io/badge/LangSmith-Evaluation%20%26%20Tracing-2E7D32?style=flat)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-E3EDFF?style=flat&logo=python&logoColor=3776AB" />
+  <img src="https://img.shields.io/badge/Streamlit-FFE0E0?style=flat&logo=streamlit&logoColor=FF4B4B" />
+  <img src="https://img.shields.io/badge/LangChain-E2ECEC?style=flat&logo=langchain&logoColor=1C3C3C" />
+  <img src="https://img.shields.io/badge/LangGraph-E0F2F1?style=flat&logo=diagramsdotnet&logoColor=00796B" />
+  <img src="https://img.shields.io/badge/ChromaDB-E8E5FA?style=flat&logo=databricks&logoColor=5B4DCE" />
+  <img src="https://img.shields.io/badge/Cohere-E4ECE9?style=flat&logo=openai&logoColor=39594D" />
+  <img src="https://img.shields.io/badge/Groq-FDE5E1?style=flat&logo=lightning&logoColor=F55036" />
+  <img src="https://img.shields.io/badge/LangSmith-E3EFE4?style=flat&logo=pytest&logoColor=2E7D32" />
+  <img src="https://img.shields.io/badge/SQLite-E0EBF2?style=flat&logo=sqlite&logoColor=003B57" />
+</p>
+
+</div>
 
 ## Application Preview
 
@@ -806,23 +812,20 @@ Potential improvements towards a production-grade enterprise deployment:
 
 - FastAPI backend to decouple the frontend from agent execution.
 - Incremental document ingestion and automated index updates.
-- Enterprise authentication and SSO integration.
-- Fine-grained document-level access control.
 - Persistent conversation storage.
 - Comprehensive SQL validation and database-level authorization.
 - Automated testing and CI/CD integration.
-- Docker-based deployment and cloud infrastructure.
-- Structured audit logging and production monitoring.
+- Docker-based deployment and cloud infrastructure (Amazon Bedrock AgentCore).
+- Structured production monitoring.
 
 ---
 
-## Author
+<div align="center">
 
-**Navendu Singh**
-
-[GitHub Profile](https://github.com/NavenduSingh17)
-
+**Built by [Navendu Singh](https://github.com/NavenduSingh17)**
 [Project Repository](https://github.com/NavenduSingh17/role-aware-enterprise-assistant)
+
+</div>
 
 ---
 
