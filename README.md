@@ -2,7 +2,7 @@
 
 # Role-Aware Enterprise AI Assistant
 
-An end-to-end **Agentic RAG-powered enterprise knowledge assistant** that enables employees to query internal company documents and structured databases using natural language. The application combines role-based access control, hybrid retrieval, contextual reranking and source citations to deliver evidence-backed responses while respecting departmental data-access boundaries.
+An end-to-end **Agentic RAG-powered enterprise knowledge assistant** that enables employees to query internal company documents and structured databases using natural language. The application combines Role-Based Access Control (RBAC), hybrid retrieval, contextual reranking, source citations, PII redaction and LangSmith evaluation and observability setup.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-E3EDFF?style=flat&logo=python&logoColor=3776AB" />
@@ -22,13 +22,13 @@ An end-to-end **Agentic RAG-powered enterprise knowledge assistant** that enable
 
 ### Streamlit Assistant
 
-![Streamlit Application Preview](docs/screenshots/streamlit-chat.png)
+![Streamlit Application Preview](assets/streamlit-chat.png)
 
 *Conversational interface for querying enterprise documents and structured employee data, with role-aware responses and source citations.*
 
 ### LangSmith Evaluation
 
-![LangSmith Evaluation Preview](docs/screenshots/langsmith-evaluation.png)
+![LangSmith Evaluation Preview](assets/langsmith-evaluation.png)
 
 *Agent execution traces and evaluation results used to inspect response quality, task completion, tool reliability and latency.*
 
@@ -40,7 +40,7 @@ An end-to-end **Agentic RAG-powered enterprise knowledge assistant** that enable
 - **Multi-format Ingestion:** PDF and Markdown document ingestion with metadata enrichment and recursive text chunking.
 - **Hybrid Retrieval:** Combines ChromaDB semantic search and BM25 keyword search using weighted ensemble retrieval.
 - **Contextual Reranking:** Cohere Rerank improves retrieval precision by selecting the most relevant passages.
-- **Role-Based Access Control (RBAC):** Role-based metadata filtering at the vector retrieval layer and role-specific BM25 indexes.
+- **Role-Based Access Control (RBAC):** Role-based metadata filtering at the vector retrieval layer and role-specific isolated BM25 indexes.
 - **Natural Language to SQL:** Converts employee-related questions into read-only SQLite queries.
 - **Source Citations:** Generates evidence-backed responses with document names, page numbers and database table references.
 - **Privacy Middleware:** Custom LangChain middleware for phone-number redaction.
@@ -635,86 +635,65 @@ Together, these seven metrics assess retrieval quality, grounded answer generati
 
 #### Login Interface
 
-![Streamlit Login](docs/screenshots/streamlit-login.png)
+![Streamlit Login](assets/streamlit-login.png)
 
 #### Chat Interface
 
-![Streamlit Chat](docs/screenshots/streamlit-chat.png)
+![Streamlit Chat](assets/streamlit-chat.png)
 
 #### Role-Based Access Demonstration
 
-![Role Based Access](docs/screenshots/streamlit-rbac.png)
+![Role Based Access](assets/streamlit-rbac.png)
 
 #### Agentic RAG Response with Citations
 
-![RAG Response with Citations](docs/screenshots/streamlit-citations.png)
+![RAG Response with Citations](assets/streamlit-citations.png)
 
 #### Natural Language to SQL
 
-![SQL Response](docs/screenshots/streamlit-sql.png)
+![SQL Response](assets/streamlit-sql.png)
 
 ### LangSmith
 
 #### Agent Execution Traces
 
-![LangSmith Traces](docs/screenshots/langsmith-traces.png)
+![LangSmith Traces](assets/langsmith-traces.png)
 
 #### Evaluation Experiment
 
-![LangSmith Evaluation](docs/screenshots/langsmith-evaluation.png)
+![LangSmith Evaluation](assets/langsmith-evaluation.png)
 
 #### Evaluation Metrics
 
-![LangSmith Metrics](docs/screenshots/langsmith-metrics.png)
+![LangSmith Metrics](assets/langsmith-metrics.png)
 
 ---
 
 ## 13. Project Structure
 
 ```text
-role-aware-enterprise-assistant/
-│
 ├── resources/
 │   └── organisation_data/
 │       ├── engineering/
 │       ├── finance/
 │       ├── marketing/
 │       └── general/
-│
-├── chroma_db/
-│   └── Persistent vector database
-│
-├── bm25_index/
-│   └── Role-specific BM25 indexes
-│
+├── chroma_db/                      # Persistent vector database
+├── bm25_index/                     # Role-specific BM25 indexes
 ├── evaluation/
-│   ├── Evaluation dataset
-│   └── Evaluation scripts
-│
-├── auth.py
-│   └── SQLite-based authentication
-│
-├── chat_agent.py
-│   └── Main agent, middleware and memory
-│
-├── knowledge_retrieval.py
-│   └── Agentic RAG and hybrid retrieval
-│
-├── database_retrieval.py
-│   └── Natural Language to SQL
-│
-├── data_ingestion.py
-│   └── Multi-format ingestion and indexing
-│
-├── streamlit_app.py
-│   └── Streamlit frontend
-│
-├── company.sqlite3
-│   └── Employee database
-│
-├── users.sqlite3
-│   └── Authentication database
-│
+│   ├── rag_eval_dataset.csv        # Dataset for RAG evaluation
+│   ├── agent_eval_dataset.csv      # Dataset for agent evaluation
+│   ├── upload_datasets.py          # Upload Datasets on LangSmith
+│   ├── eval_rag.py                 # RAG Evaluation
+│   └── eval_agent.py               # Agent Evaluation
+├── auth.py                         # SQLite-based authentication
+├── chat_agent.py                   # Main agent, middleware and memory
+├── knowledge_retrieval.py          # Agentic RAG and hybrid retrieval
+├── database_retrieval.py           # Natural Language to SQL
+├── data_ingestion.py               # Multi-format ingestion and indexing
+├── streamlit_app.py                # Streamlit frontend
+├── company.sqlite3                 # Employee database
+├── users.sqlite3                   # Authentication database
 ├── pyproject.toml
 ├── uv.lock
 └── README.md
@@ -823,7 +802,6 @@ Potential improvements towards a production-grade enterprise deployment:
 <div align="center">
 
 **Built by [Navendu Singh](https://github.com/NavenduSingh17)**
-[Project Repository](https://github.com/NavenduSingh17/role-aware-enterprise-assistant)
 
 </div>
 
